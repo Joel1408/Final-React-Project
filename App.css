@@ -1,25 +1,54 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+}
+
+.word-count-box {
+background-color: #d3a1fa;
+}
+
+.sentence-count-box {
+  background-color: #ff9f00;
+  }
+
+ .char-count-box {
+    background-color: #ff8159;
+    }
+
+  
 .word-counter {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 textarea {
   width: 100%;
   margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .counters {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   width: 100%;
 }
 
 .counter-box {
-  flex: 1;
-  margin: 0 5px;
+  flex: 1 1 150px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
+  color: black;
 }
+
