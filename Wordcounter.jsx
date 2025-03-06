@@ -5,6 +5,7 @@ import React, { useState } from "react";
 const Wordcounter = () => {
   const [wordCount, setWordCount] = useState(0);
   const [sentenceCount, setSentenceCount] = useState(0);
+  const [charCount, setCharCount] = useState(0);
 
   function countWords(text) {
     const words = text
@@ -21,10 +22,16 @@ const Wordcounter = () => {
       .filter((sentence) => sentence.trim().length > 0);
     setSentenceCount(sentences.length);
   }
+
+  function countChars(text) {
+    const characters = text.replace(/\s/g, "");
+    setCharCount(characters.length);
+  }
   const handleChange = (e) => {
     const { value } = e.target;
     countWords(value);
     countSentences(value);
+    countChars(value);
   };
 
   return (
@@ -32,16 +39,25 @@ const Wordcounter = () => {
       <textarea
         id="paragraph-input"
         rows="10"
-        placeholder="Type or paste your paragraph here..."
+        placeholder="Start typing here...(or paste your text)"
         onChange={handleChange}
       />
-      <div className="counter-display">
-        <p>
-          Word count: <strong>{wordCount}</strong>
-        </p>
-        <p>
-          Sentence count: <strong>{sentenceCount}</strong>
-        </p>
+      <div className="counters">
+        <div className="counter-box">
+          <p>
+            Word Count: <strong>{wordCount}</strong>
+          </p>
+        </div>
+        <div className="counter-box">
+          <p>
+            Sentence Count: <strong>{sentenceCount}</strong>
+          </p>
+        </div>
+        <div className="counter-box">
+          <p>
+            Total Characters: <strong>{charCount}</strong>
+          </p>
+        </div>
       </div>
     </div>
   );
