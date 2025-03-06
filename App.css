@@ -1,0 +1,25 @@
+.word-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.counter-box {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
