@@ -43,17 +43,17 @@ const Wordcounter = () => {
         onChange={handleChange}
       />
       <div className="counters">
-        <div className="counter-box">
+        <div className="counter-box word-count-box">
           <p>
             Word Count: <strong>{wordCount}</strong>
           </p>
         </div>
-        <div className="counter-box">
+        <div className="counter-box sentence-count-box">
           <p>
             Sentence Count: <strong>{sentenceCount}</strong>
           </p>
         </div>
-        <div className="counter-box">
+        <div className="counter-box char-count-box">
           <p>
             Total Characters: <strong>{charCount}</strong>
           </p>
